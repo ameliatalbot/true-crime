@@ -3,6 +3,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'Helvetica World', Helvetica, sans-serif;
   }
 .tiktokButton {
     background-color: #1e1e1e;
