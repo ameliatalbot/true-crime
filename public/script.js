@@ -1,23 +1,48 @@
-let tiktokVals = {
-    yes: 0,
-    maybe: 0,
-    no: 0,
-    total: 0
+async function tiktokYes() {
+    const response = await fetch('/api/v1/contacts/addTiktokYes', {
+        method: 'POST',
+        body: '',
+        headers: {'Content-Type': 'application/json'}            
+    });
 }
 
-function tiktokYes() {
-    tiktokVals.yes += 1;
-    tiktokVals.total += 1;
+async function tiktokNo() {
+    const response = await fetch('/api/v1/contacts/addTiktokNo', {
+        method: 'POST',
+        body: '',
+        headers: {'Content-Type': 'application/json'}            
+    });
 }
 
-function tiktokEh() {
-    tiktokVals.maybe += 1;
-    tiktokVals.total += 1;
+async function tiktokEh() {
+    const response = await fetch('/api/v1/contacts/addTiktokMaybe', {
+        method: 'POST',
+        body: '',
+        headers: {'Content-Type': 'application/json'}            
+    });
 }
 
-function tiktokNo() {
-    tiktokVals.no += 1;
-    tiktokVals.total += 1;
+function tiktokError() {
+    document.body.style.background = "none";
+    document.body.style.backgroundColor = "red";
+    document.getElementById("ilikeit").style.display = "none";
+    document.getElementById("neitherlikeordislike").style.display = "none";
+    document.getElementById("idontlikeit").style.display = "none";
+
 }
 
-module.exports = {tiktokVals};
+async function redditYes() {
+    const response = await fetch('/api/v1/contacts/addRedditYes', {
+        method: 'POST',
+        body: '',
+        headers: {'Content-Type': 'application/json'}            
+    });
+}
+
+async function redditNo() {
+    const response = await fetch('/api/v1/contacts/addRedditNo', {
+        method: 'POST',
+        body: '',
+        headers: {'Content-Type': 'application/json'}            
+    });
+}
