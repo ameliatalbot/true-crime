@@ -17,6 +17,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/v1/contacts', router);
 
+app.listen(port, () => {
+    console.log(`App listening on port ${port}`)
+});
+
 app.get('/tiktok', (req,res) => {
     res.sendFile(path.join(__dirname+'/public/index.html'));
 });
