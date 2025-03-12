@@ -6,7 +6,7 @@ const logger = require('morgan');
 const {router} = require('./routes/api/v1/contacts');
 
 var app = express();
-// const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -17,9 +17,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/v1/contacts', router);
 
-// app.listen(port, () => {
-//     console.log(`App listening on port ${port}`)
-// });
+app.listen(port, () => {
+    console.log(`App listening on port ${port}`)
+});
 
 app.get('/question1', (req,res) => {
     res.sendFile(path.join(__dirname+'/public/question1.html'));
