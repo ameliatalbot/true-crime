@@ -71,7 +71,7 @@ async function question2Error() {
 }
 
 async function question3Yes() {
-    const response = await fetch('/api/v1/contacts/question2Yes', {
+    const response = await fetch('/api/v1/contacts/question3Yes', {
         method: 'POST',
         body: '',
         headers: {'Content-Type': 'application/json'}            
@@ -80,7 +80,7 @@ async function question3Yes() {
 }
 
 async function question3No() {
-    const response = await fetch('/api/v1/contacts/question2No', {
+    const response = await fetch('/api/v1/contacts/question3No', {
         method: 'POST',
         body: '',
         headers: {'Content-Type': 'application/json'}            
