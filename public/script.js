@@ -123,7 +123,7 @@ async function success() {
     no.disabled = "true";
     const maybe = document.getElementById("neitherlikeordislike");
     maybe.disabled = "true";
-    maybe.innerHTML = "Your vote has been counted. Thanks for playing!";
+    maybe.innerHTML = "Your vote makes real change :) Thanks for playing!";
     maybe.style.backgroundColor = "black";
     maybe.style.borderColor = "black";
 }
