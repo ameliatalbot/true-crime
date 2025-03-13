@@ -78,8 +78,10 @@ async function question3Error() {
     document.body.style.background = "none";
     document.body.style.backgroundColor = "red";
     document.getElementById("ilikeit").style.visibility = "hidden";
-    document.getElementById("neitherlikeordislike").innerHTML = "FUCKING PICK ONE FAGGOT";
-    document.getElementById("neitherlikeordislike").style.backgroundColor = "red";
+    let maybe = document.getElementById("neitherlikeordislike");
+    maybe.innerHTML = "FUCKING PICK ONE PLEBIANS";
+    maybe.style.backgroundColor = "red";
+    maybe.style.borderColor = "red";
     document.getElementById("idontlikeit").style.visibility = "hidden";
     await delay(2000);
     document.body.style.backgroundColor = "black";
@@ -88,8 +90,9 @@ async function question3Error() {
     document.body.style.backgroundAttachment = "fixed";
     document.body.style.backgroundSize = "cover";
     document.getElementById("ilikeit").style.visibility = "visible";
-    document.getElementById("neitherlikeordislike").innerHTML = "Maybe?";
-    document.getElementById("neitherlikeordislike").style.backgroundColor = "#1e1e1e";
+    maybe.innerHTML = "Maybe?";
+    maybe.style.backgroundColor = "#1e1e1e";
+    maybe.style.borderColor = "#1e1e1e";
     document.getElementById("idontlikeit").style.visibility = "visible";
 }
 
