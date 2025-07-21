@@ -2,8 +2,8 @@
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
-async function submit() {
-    console.log();
+function form() {
+    console.log("hi");
     let color = document.getElementById("colors").value;
     let suspect = "";
     let ele = document.getElementsByClassName("suspects");
@@ -20,7 +20,7 @@ async function submit() {
 }
 
 async function q1(pcolor, psuspect, psource) {
-    console.log("hello");
+    console.log("in q1 async");
     let data = {color: pcolor, suspect: psuspect, source: psource};
     console.log(data);
     const response = await fetch('/api/v1/contacts/q1', {
