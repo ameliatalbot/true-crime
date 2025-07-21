@@ -20,6 +20,7 @@ async function submit() {
 }
 
 async function q1(pcolor, psuspect, psource) {
+    console.log("hello");
     let data = {color: pcolor, suspect: psuspect, source: psource};
     console.log(data);
     const response = await fetch('/api/v1/contacts/q1', {
