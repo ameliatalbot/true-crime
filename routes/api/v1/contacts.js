@@ -10,6 +10,7 @@ let question3Vals = {brian: 0, justin: 0, hj: 0, kristen: 0, news: 0, tt: 0, tot
 /* Define your routes/endpoints here */
 
 router.get('/question1Response', (req, res) => {
+    console.log('we in');
     let data = question1Vals;
     res.status(200).json(data);
 });
