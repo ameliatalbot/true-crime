@@ -2,38 +2,87 @@
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
-async function question1Yes() {
-    const response = await fetch('/api/v1/contacts/question1Yes', {
+async function submit() {
+    console.log();
+    let color = document.getElementById("colors").value;
+    let suspect = "";
+    let ele = document.getElementsByClassName("suspects");
+    for (i = 0; i < ele.length; i++) {
+        if (ele.type = "radio") {
+            if (ele[i].checked) {
+                suspect = ele[i];
+            }
+        }
+    }
+    let source = document.getElementById("news").checked ? "news" : "TikTok";
+    q1(color, suspect, source);
+    success();
+}
+
+async function q1(pcolor, psuspect, psource) {
+    let data = {color: pcolor, suspect: psuspect, source: psource};
+    const response = await fetch('/api/v1/contacts/justin', {
         method: 'POST',
-        body: '',
+        body: JSON.stringify(data),
         headers: {'Content-Type': 'application/json'}            
     });
     success();
 }
 
-async function question1No() {
-    const response = await fetch('/api/v1/contacts/question1No', {
+async function justin() {
+    let colorparam = document.getElementById("colors").value;
+    if (colorparam.length === 0) {
+        error();
+    }
+    let data = {color: colorparam};
+    const response = await fetch('/api/v1/contacts/justin', {
         method: 'POST',
-        body: '',
+        body: JSON.stringify(data),
         headers: {'Content-Type': 'application/json'}            
     });
     success();
 }
 
-async function question1Error() {
-    document.getElementById("ilikeit").style.visibility = "hidden";
-    document.getElementById("ilikeit").disabled = "true";
-    document.getElementById("neitherlikeordislike").innerHTML = "Oops! Pick a real option.";
-    document.getElementById("neitherlikeordislike").style.backgroundColor = "red";
-    document.getElementById("idontlikeit").style.visibility = "hidden";
-    document.getElementById("idontlikeit").disabled = "true";
-    await delay(2000);
-    document.getElementById("ilikeit").style.visibility = "visible";
-    document.getElementById("ilikeit").disabled = "false";
-    document.getElementById("neitherlikeordislike").innerHTML = "Maybe?";
-    document.getElementById("neitherlikeordislike").style.backgroundColor = "#1e1e1e";
-    document.getElementById("idontlikeit").style.visibility = "visible";
-    document.getElementById("idontlikeit").disabled = "false";
+async function brian() {
+    let colorparam = document.getElementById("colors").value;
+    if (colorparam.length === 0) {
+        error();
+    }
+    let data = {color: colorparam};
+    const response = await fetch('/api/v1/contacts/brian', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {'Content-Type': 'application/json'}            
+    });
+    success();
+}
+
+async function hj() {
+    let colorparam = document.getElementById("colors").value;
+    if (colorparam.length === 0) {
+        error();
+    }
+    let data = {color: colorparam};
+    const response = await fetch('/api/v1/contacts/hj', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {'Content-Type': 'application/json'}            
+    });
+    success();
+}
+
+async function kristen() {
+    let colorparam = document.getElementById("colors").value;
+    if (colorparam.length === 0) {
+        error();
+    }
+    let data = {color: colorparam};
+    const response = await fetch('/api/v1/contacts/kristen', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {'Content-Type': 'application/json'}            
+    });
+    success();
 }
 
 async function question2Yes() {
@@ -115,6 +164,9 @@ async function question3Error() {
 }
 
 async function success() {
+    const colors = document.getElementById("colors");
+    colors.style.visibility = "hidden";
+    colors.disabled = "true";
     const yes = document.getElementById("ilikeit");
     yes.style.visibility = "hidden";
     yes.disabled = "true";
@@ -124,8 +176,11 @@ async function success() {
     const maybe = document.getElementById("neitherlikeordislike");
     maybe.disabled = "true";
     maybe.innerHTML = "Your vote makes real change :) Thanks for playing!";
-    maybe.style.backgroundColor = "black";
-    maybe.style.borderColor = "black";
+    console.log('yo');
+    const body = document.getElementsByTagName('body')[0];
+    body.style.backgroundImage = "url('./whoDidItback.png')";
+    console.log('yo yo');
+    maybe.style.borderColor = "#1e1e1e";
 }
 
 // async function redditYes() {
