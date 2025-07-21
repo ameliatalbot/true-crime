@@ -10,25 +10,25 @@ let question3Vals = {brian: 0, justin: 0, hj: 0, kristen: 0, news: 0, tt: 0, tot
 /* Define your routes/endpoints here */
 
 router.get('/question1Response', (req, res) => {
-    console.log('we in');
     let data = question1Vals;
     res.status(200).json(data);
 });
 
 router.post('/q1', (req, res) => {
+  console.log("posting");
   console.log(req.body);
-  if (req.body.suspect === "Brian") {
+  if (req.body.suspect === "brian") {
     question1Vals.brian += 1;
-  } else if (req.body.suspect === "Justin") {
+  } else if (req.body.suspect === "justin") {
     question1Vals.justin += 1;
-  } else if (req.body.suspect === "Homeless Joe") {
+  } else if (req.body.suspect === "hj") {
     question1Vals.hj += 1;
-  } else if (req.body.suspect === "Kristen") {
+  } else if (req.body.suspect === "kristen") {
     question1Vals.kristen += 1;
   }
-  if (req.body.source === "News") {
+  if (req.body.source === "news") {
     question1Vals.news += 1;
-  } else if (req.body.source === "TikTok") {
+  } else if (req.body.source === "tt") {
     question1Vals.tt += 1;
   }
   question1Vals.total += 1;
