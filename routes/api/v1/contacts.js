@@ -16,6 +16,7 @@ router.get('/question1Response', (req, res) => {
 });
 
 router.post('/q1', (req, res) => {
+  console.log(req.body);
   if (req.body.suspect === "Brian") {
     question1Vals.brian += 1;
   } else if (req.body.suspect === "Justin") {
