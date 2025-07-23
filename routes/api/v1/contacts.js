@@ -11,6 +11,7 @@ let question3Vals = {brian: 0, justin: 0, hj: 0, kristen: 0, news: 0, tt: 0, tot
 
 router.get('/question1Response', (req, res) => {
     let data = question1Vals;
+    console.log(data);
     res.status(200).json(data);
 });
 
