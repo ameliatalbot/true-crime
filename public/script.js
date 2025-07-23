@@ -14,7 +14,7 @@ function bluh() {
             }
         }
     }
-    let source = document.getElementById("news").checked ? "news" : "TikTok";
+    let source = document.getElementById("news").checked ? "news" : "tt";
     q1(color, suspect, source);
     success();
 }
