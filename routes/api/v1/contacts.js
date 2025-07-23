@@ -33,12 +33,12 @@ router.post('/q1', (req, res) => {
     question1Vals.tt += 1;
   }
   question1Vals.total += 1;
-  question1Vals.bPer = (question1Vals.bPer / question1Vals.total).toFixed(2) * 100;
-  question1Vals.jPer = (question1Vals.jPer / question1Vals.total).toFixed(2) * 100;
-  question1Vals.hjPer = (question1Vals.hjPer / question1Vals.total).toFixed(2) * 100;
-  question1Vals.kPer = (question1Vals.kPer / question1Vals.total).toFixed(2) * 100;
-  question1Vals.nPer = (question1Vals.nPer / question1Vals.total).toFixed(2) * 100;
-  question1Vals.tPer = (question1Vals.tPer / question1Vals.total).toFixed(2) * 100;
+  question1Vals.bPer = (question1Vals.brian / question1Vals.total).toFixed(2) * 100;
+  question1Vals.jPer = (question1Vals.justin / question1Vals.total).toFixed(2) * 100;
+  question1Vals.hjPer = (question1Vals.hj / question1Vals.total).toFixed(2) * 100;
+  question1Vals.kPer = (question1Vals.kristen / question1Vals.total).toFixed(2) * 100;
+  question1Vals.nPer = (question1Vals.news / question1Vals.total).toFixed(2) * 100;
+  question1Vals.tPer = (question1Vals.tt / question1Vals.total).toFixed(2) * 100;
   res.status(200).json({data: 'question1 updated'});
 })
 
