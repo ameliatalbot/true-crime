@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TikTok</title>
+    <title>College Park Killer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="script.js"></script>
     <link href="tiktokstyle.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="knife.png">
     <style>
         body {
-            background-image: url('./who\ Did\ It.png');
+            background-image: url('./2.png');
         }
     </style>
 </head>
-<body style="font-family: 'Itim'">
+<body>
     <div>
-        <button class="tiktokButton" id="ilikeit" onclick="question2Yes();">Yes</button>
-        <button class="tiktokButton" id="neitherlikeordislike" onclick="question2Error();">Maybe?</button>
-        <button class="tiktokButton" id="idontlikeit" onclick="question2No();">No</button>
+            <div class="center-align">
+                <input type="radio" class="suspects" name="suspect" id="ilikeit" value="brian" required>
+                    <label class="suspects" for="ilikeit">Brian</label>
+                </br>
+                <input type="radio" class="suspects" name="suspect" id="idontlikeit" value="justin">
+                    <label class="suspects" for="idontlikeit">Justin</label>
+                </br>
+            </div>
+            <div class="center-align">
+                <input type="radio" class="sources" name="source" value="news" id="news" required>
+                    <Label class="sources" for="news">News</Label>
+                </br>
+                <input type="radio" class="sources" name="source" value="tt" id="tt">
+                    <label class="sources" for="tt">TikTok</label>
+                </br>
+            </div>
+            <button class="tiktokButton" id="sub" onclick="q2()">
     </div>
 </body>
 </html>
