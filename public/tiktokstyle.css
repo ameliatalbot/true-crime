@@ -15,6 +15,18 @@ body {
     margin-top: 60%;
   }
 
+.sec-center {
+    width: 300px;
+    height: 80px;
+    margin-left: 20%;
+    display: table;
+    margin-top: 10%;
+}
+
+#q4 {
+    margin-top: 50%;
+}
+
 input[type="radio"]{
     visibility: hidden;
     height: 0;
