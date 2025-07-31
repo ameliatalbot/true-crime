@@ -23,6 +23,24 @@ router.get('/question1Response', (req, res) => {
     res.status(200).json(data);
 });
 
+router.get('/question2Response', (req, res) => {
+  let data = question2Vals;
+  console.log(data);
+  res.status(200).json(data);
+});
+
+router.get('/question3Response', (req, res) => {
+  let data = question3Vals;
+  console.log(data);
+  res.status(200).json(data);
+});
+
+router.get('/question4Response', (req, res) => {
+  let data = question4Vals;
+  console.log(data);
+  res.status(200).json(data);
+});
+
 router.post('/q1', (req, res) => {
   console.log("posting");
   console.log(req.body);
@@ -115,75 +133,5 @@ router.post('/q4', (req, res) => {
   question4Vals.tPer = (question4Vals.tt / question4Vals.total).toFixed(2) * 100;
   res.status(200).json({data: 'question4 updated'});
 })
-
-router.post('/brian', (req, res) => {
-  question1Vals.brian.push(req.body.color);
-  question1Vals.total +=1;
-  console.log(question1Vals);
-  res.status(200).json({data: 'question1 brian updated'});
-});
-
-router.post('/justin', (req, res) => {
-  question1Vals.justin.push(req.params.user);
-  question1Vals.total +=1;
-  console.log(question1Vals);
-  res.status(200).json({data: 'question1 justin updated'});
-});
-
-router.post('/hj', (req, res) => {
-  question1Vals.hj.push(req.params.user);
-  question1Vals.total +=1;
-  console.log(question1Vals);
-  res.status(200).json({data: 'question1 hj updated'});
-});
-
-router.post('/kristen', (req, res) => {
-  question1Vals.kristen.push(req.params.user);
-  question1Vals.total +=1;
-  console.log(question1Vals);
-  res.status(200).json({data: 'question1 kristen updated'});
-});
-
-router.get('/question2Response', (req, res) => {
-  let data = question2Vals;
-  res.status(200).json(data);
-});
-
-router.post('/question2Yes', (req, res) => {
-  question2Vals.yes += 1;
-  question2Vals.total += 1;
-  question2Vals.yesPer = (question2Vals.yes / question2Vals.total).toFixed(2) * 100;
-  question2Vals.noPer = 100 - question2Vals.yesPer;
-  res.status(200).json({data: 'question2 yes updated'});
-});
-
-router.post('/question2No', (req, res) => {
-  question2Vals.no += 1;
-  question2Vals.total += 1;
-  question2Vals.yesPer = (question2Vals.yes / question2Vals.total).toFixed(2) * 100;
-  question2Vals.noPer = 100 - question2Vals.yesPer;
-  res.status(200).json({data: 'question2 no updated'});
-});
-
-router.get('/question3Response', (req, res) => {
-  let data = question3Vals;
-  res.status(200).json(data);
-});
-
-router.post('/question3Yes', (req, res) => {
-  question3Vals.yes += 1;
-  question3Vals.total += 1;
-  question3Vals.yesPer = (question3Vals.yes / question3Vals.total).toFixed(2) * 100;
-  question3Vals.noPer = 100 - question3Vals.yesPer;
-  res.status(200).json({data: 'question3 yes updated'});
-});
-
-router.post('/question3No', (req, res) => {
-  question3Vals.no += 1;
-  question3Vals.total += 1;
-  question3Vals.yesPer = (question3Vals.yes / question3Vals.total).toFixed(2) * 100;
-  question3Vals.noPer = 100 - question3Vals.yesPer;
-  res.status(200).json({data: 'question3 no updated'});
-});
 
 module.exports = {router};
