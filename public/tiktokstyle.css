@@ -3,23 +3,16 @@ body {
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Cooper Hewitt', sans-serif;
+    height: 100%;
+    overflow: hidden;
   }
-
-.colors {
-    margin-top: 50%;
-    margin-left: 40%;
-    font-size: 1.25rem;
-    background-color: #1e1e1e;
-    border: solid 0.5px #cb0505;
-    color: #e2e2e2;
-}
 
 .center-align{
     width: 300px;
     height: 80px;
     margin-left: 20%;
     display: table;
-    margin-top: 30%;
+    margin-top: 60%;
   }
 
 input[type="radio"]{
@@ -35,7 +28,7 @@ label {
     background-color: #1e1e1e;
     color: white;
     font-weight: lighter;
-    font-size: 1.25rem;
+    font-size: 2rem;
     border: solid 0.5px #cb0505;
     border-radius: 8px;
 }

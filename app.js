@@ -33,4 +33,8 @@ app.get('/question3', (req, res) => {
     res.sendFile(path.join(__dirname+'/public/question3.html'));
 });
 
+app.get('/question4', (req, res) => {
+    res.sendFile(path.join(__dirname+'/public/question4.html'));
+});
+
 module.exports = app;
